@@ -6,7 +6,7 @@ const providedOperators = {
 
 const operators = Object.keys(providedOperators)
 
-const lexer = (strInput) => strInput.split(' ').filter(item => !!item?.length)
+const lexer = (strInput) => strInput.split(' ').filter(item => !!item.length)
 
 const parser = (_tokens) => {
   const tokens = _tokens.map(item => isNaN(item) ? item : parseInt(item))
