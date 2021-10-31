@@ -14,11 +14,11 @@ const parser = (_tokens) => {
   const numbers = tokens.filter((token) => typeof token  === 'number')
 
   if (operatorIdx < 0) {
-    return new Error('Undefined Operator')
+    return 'Undefined Operator'
   }
 
   if (!numbers.length) {
-    return new Error('Undefined Numbers')
+    return 'Undefined Numbers'
   }
 
   return {
@@ -28,10 +28,10 @@ const parser = (_tokens) => {
 }
 
 const transformToMath = (tokens) => {
-  if (typeof tokens === 'object') {   
-    return `${tokens.numbers.join(` ${providedOperators[tokens.operator]} `)}`
+  if (typeof tokens === 'string') {
+    return new Error(tokens)
   } else {
-    return tokens
+    return `${tokens.numbers.join(` ${providedOperators[tokens.operator]} `)}`
   }
 }
 
@@ -45,6 +45,7 @@ const compile = (input) => {
     }
   }
 }
+
 
 console.log(compile('penjumlahan 2 44 5 33 55'))
 // console.log(compile('perkalian 2 44 5 33 55'))
