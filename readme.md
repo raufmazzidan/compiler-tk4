@@ -2,7 +2,7 @@
 
 ### How to run
 
-1. Install node to your pc or use online compiler (v14.16.1 or latest node version) 
+1. Install [NodeJS](https://nodejs.org/en/) to your pc or use online compiler (v14.16.1 or latest node version) 
 
 2. Clone this repository
 3. Run this command
@@ -23,3 +23,4 @@ node main
   }
 }
 ```
+5. If you using online compiler, just copy [main.js](main.js) to your online compiler then run it
